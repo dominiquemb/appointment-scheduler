@@ -4,6 +4,13 @@ The default route will take you to the new appointment page.
 
 Going to "/admin" will show you a list of existing appointments and an admin navbar. From these pages, you can edit and cancel appointments, as well as manage hours of operation for each appointment type.
 
+## How to run
+
+Simply clone into a directory and then run:
+
+    node js/server.js
+
+The server runs on port 3000
 
 ## Database queries that need to be run
 
