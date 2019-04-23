@@ -4,13 +4,17 @@ The default route will take you to the new appointment page.
 
 Going to "/admin" will show you a list of existing appointments and an admin navbar. From these pages, you can edit and cancel appointments, as well as manage hours of operation for each appointment type.
 
-## How to run
+## How to run the back-end
 
 Simply clone into a directory and then run:
 
     node js/server.js
 
-The server runs on port 3000
+The back-end server runs on port 3000
+
+## How to access the front-end
+
+Simply navigate your browser to 127.0.0.1/location-of-git-clone/index.html
 
 ## Database queries that need to be run
 
