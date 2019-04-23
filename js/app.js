@@ -8,6 +8,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
 		controller: "ViewAppointmentTypesController",
 		templateUrl: 'views/admin/view-appointment-types.html'
 	};
+	var appointmentConfirmedState = {
+		name: 'appointmentconfirmed',
+		url: '/appointment-confirmed',
+		templateUrl: 'views/appointment-confirmed.html'
+	};
 	var editAppointmentTypeState = {
 		name: 'editappointmenttype',
 		url: '/edit-appointment-type',
@@ -48,6 +53,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 		.state(newAppointmentState)
 		.state(viewAppointmentTypesState)
 		.state(editAppointmentTypeState)
+		.state(appointmentConfirmedState)
 		.state(adminNewAppointmentState)
 		.state(editAppointmentState)
 		.state(viewAppointmentsState);
@@ -309,6 +315,7 @@ app.controller("ManageAppointmentController", function($scope, $timeout, $http, 
 				console.log('appointment submitted');
 				console.log($scope.data);
 			console.log(result);
+			$state.go('appointmentconfirmed');
 		},
 		function(error) {
 			console.log(error);
