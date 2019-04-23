@@ -1,0 +1,32 @@
+<div class="navbar"></div>
+
+<div class="view-appointments">
+	<table class="table">
+		<thead>
+			<th>Booked by</th>
+			<th>Type</th>
+			<th>Date</th>
+			<th>Time</th>
+			<th>Status</th>
+			<th>Modified by</th>
+			<th>Modified on</th>
+			<th>Created on</th>
+			<th></th>
+			<th></th>
+		</thead>
+		<tbody>
+			<tr ng-repeat="row in appointments">
+				<td>{{row.name}}</td>
+				<td>{{row.typeLabel}}</td>
+				<td>{{row.date}}</td>
+				<td>{{row.time}}</td>
+				<td>{{row.canceledLabel}}</td>
+				<td>{{row.modified_by}}</td>
+				<td>{{row.modified_on}}</td>
+				<td>{{row.created_on}}</td>
+				<td><a href='#' ng-click="editAppointment($event, row.id)">Edit</a></td>
+				<td><a href='#' ng-click="cancelAppointment($event, row)">Cancel</a></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

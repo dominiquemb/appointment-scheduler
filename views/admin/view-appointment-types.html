@@ -1,0 +1,26 @@
+<div class="navbar"></div>
+
+<div class="view-appointment-types">
+	<table class="table">
+		<thead>
+			<th>ID</th>
+			<th>Type</th>
+			<th>Earliest appt. time</th>
+			<th>Latest appt. time</th>
+			<th>Duration of appts.</th>
+			<th>Max # of places</th>
+			<th></th>
+		</thead>
+		<tbody>
+			<tr ng-repeat="row in appointmenttypes">
+				<td>{{row.type}}</td>
+				<td>{{row.typeLabel}}</td>
+				<td>{{row.startTimeLabel}}</td>
+				<td>{{row.endTimeLabel}}</td>
+				<td>{{row.timeIntervalLabel}}</td>
+				<td>{{row.places}}</td>
+				<td><a href='#' ng-click="editAppointmentType($event, row.type)">Edit</a></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
